@@ -1,0 +1,18 @@
+#home {
+	padding: 10vmin;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#home > div {
+	margin: 5vh 0;
+}
+
+#ks-logo-home {
+	width: 20vmin;
+	height: 20vmin;
+	background-color: white;
+	border-radius: 50%;
+}

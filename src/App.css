@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+.canvasWrapper {
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -10;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.moon {
+	width: 40vw;
+	height: 40vw;
+	position: absolute;
+	z-index: -5;
+	background-color: whitesmoke;
+	border-radius: 20vw;
+	top: -20vw;
+	left: -20vw;
+	animation: 2.5s infinite alternate move ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.meteor {
+	position: absolute;
+	top: -100vw;
+	animation: strike 5s ease-in;
+	animation-delay: 2s;
+	transform: rotateY(180deg);
+	z-index: -3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes move {
+	from {top: -10vw; display: inline;}
+	to {top: -5vw; display: inline;}
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes strike {
+	from {top: 0px; right: 0px; width: 20px; height: 20px}
+	to {top: 100vh; right: 100vw; width: 60px; height: 60px}
 }
