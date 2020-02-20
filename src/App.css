@@ -27,6 +27,7 @@
 	animation-delay: 2s;
 	transform: rotateY(180deg);
 	z-index: -3;
+	opacity: 0;
 }
 
 @keyframes move {
@@ -35,6 +36,6 @@
 }
 
 @keyframes strike {
-	from {top: 0px; right: 0px; width: 20px; height: 20px}
-	to {top: 100vh; right: 100vw; width: 60px; height: 60px}
+	from {top: 0px; right: 0px; width: 20px; height: 20px; opacity: 1;}
+	to {top: 100vh; right: 100vw; width: 60px; height: 60px; opacity: 1;}
 }

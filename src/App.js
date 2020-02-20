@@ -12,12 +12,23 @@ import Routes from './components/Routes';
 import './App.css';
 
 class App extends Component {
+
+
 	componentDidMount() {
-		let canvas = document.querySelector('.canvasWrapper');
-		let body = document.body;
-		let html = document.documentElement;
-		let ht = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
-		canvas.style.height = `${ht}px`;
+		this.canvas = document.querySelector('.canvasWrapper');
+		this.body = document.body;
+		this.html = document.documentElement;
+		this.updateCanvasHeight();
+		this.checkForUpdate = setInterval(this.updateCanvasHeight, 3000);
+	}
+
+	componentWillUnmount() {
+		clearInterval(this.checkForUpdate);
+	}
+
+	updateCanvasHeight = () => {
+		let ht = Math.max( this.body.scrollHeight, this.body.offsetHeight, this.html.clientHeight, this.html.scrollHeight, this.html.offsetHeight );
+		this.canvas.style.height = `${ht}px`;
 	}
 
 	render() {

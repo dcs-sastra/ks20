@@ -7,15 +7,11 @@ import logo from '../../assets/logo.png';
 import './Home.css';
 
 class Home extends Component {
-	// componentDidMount() {
-	// 	const logo = document.getElementById('ks-logo-home');
-	// 	logo.classList.add('fade-in');
-	// }
 	render() {
 		return (
 			<div id="home">
-				<div id="top">
-					<img id="ks-logo-home" src={logo} />
+				<div id="top" className="container">
+					<img id="ks-logo-home" className="img-fluid" src={logo} />
 					<Timer />
 				</div>
 				<Events />
