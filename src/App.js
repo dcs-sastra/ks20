@@ -13,10 +13,11 @@ import './App.css';
 
 class App extends Component {
 	componentDidMount() {
-		let canvas = document.querySelector('canvas.canvasWrapper');
-		console.log(canvas);
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
+		let canvas = document.querySelector('.canvasWrapper');
+		let body = document.body;
+		let html = document.documentElement;
+		let ht = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+		canvas.style.height = `${ht}px`;
 	}
 
 	render() {
@@ -28,11 +29,8 @@ class App extends Component {
 		  		<Navbar />
 
 		        <Particles 
-		        	width='100'
-		        	height='100'
 		            params={configs}
 		            className = "canvasWrapper"
-		            canvasClassName = "canvasWrapper"
 		        />
 
 		        <Routes />

@@ -1,5 +1,4 @@
 #home {
-	padding: 10vmin;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -7,12 +6,42 @@
 }
 
 #home > div {
-	margin: 5vh 0;
+	/*margin: 5vh 0;*/
+}
+
+#top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
 }
 
 #ks-logo-home {
-	width: 20vmin;
-	height: 20vmin;
+	width: 20vh;
+	height: 20vh;
 	background-color: white;
 	border-radius: 50%;
+	position: absolute;
+	top: 30vh;
+	animation: fadeinmoveup 2s ease-in-out;
+}
+
+#timer {
+	position: absolute;
+	bottom: 15vh;
+	animation: fadein 4s ease-in-out;
+}
+
+@keyframes fadeinmoveup {
+	0% {opacity: 0; margin: auto; width: 40vh; height: 40vh}
+	50% {opacity: 1; margin: auto; width: 40vh; height: 40vh}
+	100% {opacity: 1; margin: none; width: 20vh; height: 20vh}
+}
+
+@keyframes fadein {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}
 }

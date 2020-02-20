@@ -2,13 +2,8 @@ html, body, #root{
 	height: 100%;
 	width: 100%;
 	color: yellow;
-	overflow: hidden;
 }
 
 body {
 	margin: 0;
-}
-
-#root {
-	overflow: auto;
 }

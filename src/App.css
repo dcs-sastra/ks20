@@ -22,7 +22,7 @@
 
 .meteor {
 	position: absolute;
-	top: -100vw;
+	top: -100vh;
 	animation: strike 5s ease-in;
 	animation-delay: 2s;
 	transform: rotateY(180deg);

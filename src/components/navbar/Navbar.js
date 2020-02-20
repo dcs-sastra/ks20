@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import './Navbar.css';
 
 class Navbar extends Component {
 	render() {
 		return (
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<nav class="my-nav navbar navbar-expand-lg navbar-dark bg-dark">
 			  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>

@@ -1,6 +1,36 @@
 #timer {
-	width: 50vw;
-	height: 20vh;
-	background-color: rgba(255, 0, 0, 0.5); 
+	width: 80%;
+	max-width: 1000px;
+	color: white;
 	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	font-family: 'digital-7', sans-serif;
+	font-size: 2em;
+}
+
+#timer > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: space-between;
+	margin: 1vw;
+}
+
+.desc {
+	display: flex;
+	align-items: flex-end;
+}
+
+.val {
+	font-size: 3em;
+	display: flex;
+	align-items: flex-end;
+	line-height: 1em;
+}
+
+@font-face {
+	font-family: 'digital-7';
+	src: url('../../../assets/digital-7.ttf');
 }
