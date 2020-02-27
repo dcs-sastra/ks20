@@ -27,7 +27,7 @@
 
 #timer {
 	position: absolute;
-	bottom: 15vh;
+	bottom: 5vh;
 	animation: fadein 4s ease-in-out;
 	font-size: calc(16px + 2vw);
 	z-index: -1;

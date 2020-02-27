@@ -1,21 +1,39 @@
 #timer {
 	width: 80%;
-	max-width: 1000px;
 	color: white;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	font-size: 2em;
+}
+
+.countdown {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
 	font-family: 'digital-7', sans-serif;
-	font-size: 2em;
+	margin: 2vw 1vw 1vw 1vw;
 }
 
-#timer > div {
+.countdown > div {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: space-between;
+}
+
+.countdown > div > div {
 	margin: 1vw;
+}
+
+.timer-text {
+	text-align: center;
+	font-family: monospace;
+	font-size: 1.1em;
+	line-height: 1.5em;
 }
 
 .desc {

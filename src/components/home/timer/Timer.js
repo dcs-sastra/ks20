@@ -35,24 +35,26 @@ class Timer extends Component {
 
 	render() {
 		return (
-			<div id='timer'>
-				<div>
-					<div className="val">{this.state.days}</div>
-					<div className="desc">DAYS</div>
+			<div id='timer' className='fade-in'>
+				<div className="timer-text">Launching In</div>
+				<div className="countdown">
+					<div>
+						<div className="val">{this.state.days}</div>
+						<div className="desc">DAYS</div>
+					</div>
+					<div>
+						<div className="val">{this.state.hours}</div>
+						<div className="desc">HRS</div>
+					</div>
+					<div>
+						<div className="val">{this.state.minutes}</div>
+						<div className="desc">MINS</div>
+					</div>
+					<div>
+						<div className="val">{this.state.seconds}</div>
+						<div className="desc">SECS</div>
+					</div>
 				</div>
-				<div>
-					<div className="val">{this.state.hours}</div>
-					<div className="desc">HRS</div>
-				</div>
-				<div>
-					<div className="val">{this.state.minutes}</div>
-					<div className="desc">MINS</div>
-				</div>
-				<div>
-					<div className="val">{this.state.seconds}</div>
-					<div className="desc">SECS</div>
-				</div>
-
 			</div>	
 		)
 	}
