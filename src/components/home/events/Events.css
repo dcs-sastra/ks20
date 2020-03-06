@@ -16,8 +16,9 @@
 
 #sun{
 	position: absolute;
-	border:1px solid white;
-	border-radius: 50%;
+	border:1px solid #fcb033;
+	border-radius: 52%;
+	background-image: radial-gradient(yellow,#fcb033,#fa8607);
 	/* top:-20vw; */
 	height:15vw;
 	width:15vw;
@@ -33,21 +34,21 @@
 @keyframes glow {
 
   48% {
-		box-shadow: 0 0 160px 100px #FFFFFF;
+		box-shadow: 0 0 100px 100px #fcb033;
 		/* transform: translateX(-200%); */
 		/* transform: translateY(-200px); */
 
   }
 
   50% {
-		box-shadow: 0 0 160px 100px #FFFFFF;
+		box-shadow: 0 0 100px 100px #fcb033;
 		/* transform: translateX(-400%); ; */
 
 
   }
 
   52% {
-		box-shadow: 0 0 160px 100px #FFFFFF;
+		box-shadow: 0 0 100px 100px #fcb033;
 		/* transform: translateX(-600%); */
   }
 
