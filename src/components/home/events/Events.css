@@ -9,49 +9,5 @@
 	font-size: 3em;
 	text-align: center;
 	width: 75%;
-
-	/*background-color: rgba(0, 0, 255, 0.5);*/
-
+	flex-flow: row wrap;
 }
-/*
-#sun{
-	position: absolute;
-	border:1px solid #fcb033;
-	border-radius: 52%;
-	background-image: radial-gradient(yellow,#fcb033,#fa8607);
-	/* top:-20vw;
-	height:15vw;
-	width:15vw;
-	margin-left:42% !important;
-	z-index:-5;
-	animation: glow 14s ease-in infinite alternate-reverse;
-	/* left:-10vw;
-
-}
-
-
-
-@keyframes glow {
-
-  48% {
-		box-shadow: 0 0 100px 100px #fcb033;
-		/* transform: translateX(-200%);
-		/* transform: translateY(-200px);
-
-  }
-
-  50% {
-		box-shadow: 0 0 100px 100px #fcb033;
-		/* transform: translateX(-400%); ;
-
-
-  }
-
-  52% {
-		box-shadow: 0 0 100px 100px #fcb033;
-		/* transform: translateX(-600%);
-  }
-
-}
-
-*/
