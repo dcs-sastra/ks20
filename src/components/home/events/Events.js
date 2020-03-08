@@ -11,19 +11,22 @@ class Events extends Component {
 		super(props);
 		this.state = {
 			events: [{
-				"eventName": "DSC",
+				"eventName": "DANCE",
 				"eventImage": "https://miro.medium.com/max/1185/1*a1Sy9bAOy6vZzILhvhSYjA.png",
-				"eventDescription": "DSC SASTRA"
+				"eventDescription": "DSC SASTRA",
+				id:"demo1"
 			},
 			{
-				"eventName": "DSC",
+				"eventName": "DRAMA",
 				"eventImage": "https://miro.medium.com/max/1185/1*a1Sy9bAOy6vZzILhvhSYjA.png",
-				"eventDescription": "DSC SASTRA"
+				"eventDescription": "DSC SASTRA",
+				id:"demo2"
 			},
 			{
-				"eventName": "DSC",
+				"eventName": "SINGING",
 				"eventImage": "https://miro.medium.com/max/1185/1*a1Sy9bAOy6vZzILhvhSYjA.png",
-				"eventDescription": "DSC SASTRA"
+				"eventDescription": "DSC SASTRA",
+				id:"demo4"
 			}]
 		}
 	}
@@ -34,11 +37,11 @@ class Events extends Component {
 				<Grid justify="space-between" container direction="row" alignItems="center">
 					{
 						this.state.events.map((value) => {
-							return <Grid xs={11} sm={5} md={5} lg={3} item><EventCard event={value} class="eventCard" /></Grid>
+							console.log(value)
+							return <Grid xs={11} sm={5} md={5} lg={3} item><EventCard event={value} class="eventCard" dataTarget="#demo4"/></Grid>
 						})
 					}
 				</Grid>
-        <Sun style={{ overflow: "hidden" }} />
 			</div>
 		)
 	}

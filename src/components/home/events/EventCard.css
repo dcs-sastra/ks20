@@ -22,3 +22,168 @@
 	width:100%;
 	height:100%;
 }
+
+#events {
+	min-height: 100vh;
+	/*width: 100%;*/
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: monospace;
+	font-size: 3em;
+	text-align: center;
+	width: 75%;
+
+	/*background-color: rgba(0, 0, 255, 0.5);*/
+
+}
+
+.opacity-animate3{
+    animation:opt-animation3 1s ;
+  -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes opt-animation3 {
+  0%   { opacity: 0; transform: scale(0.75);}
+  100% { opacity: 1; transform: scale(1);}
+}
+@-moz-keyframes opt-animation3 {
+   0%   { opacity: 0; transform: scale(0.75);}
+  100% { opacity: 1; transform: scale(1);}
+}
+@-o-keyframes opt-animation3{
+  0%   { opacity: 0; transform: scale(0.75);}
+  100% { opacity: 1; transform: scale(1);}
+}
+@keyframes opt-animation3 {
+  0%   { opacity: 0; transform: scale(0.75);}
+  100% { opacity: 1; transform: scale(1);}
+}
+
+.opacity-animate4{
+	animation:opt-animation4 2s;
+  animation-fill-mode: forwards
+}
+
+
+@keyframes opt-animation4 {
+  0% {
+    transform: scale(0) rotate(360deg);
+  }
+  60% {
+    transform: scale(0.8) rotate(-10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.modal-dialog {
+    margin: 20vh auto 0px auto
+}
+
+a,p{
+	color: black;
+}
+
+#earth {
+	/* [1] Allow it to contain the absolutely positions pseudo-elements (later-on) */
+	position: relative;
+  
+	/* [2] Set-up the dimensions and spacing */
+	width: 125px;
+	height: 125px;
+	margin:1em auto;
+  
+	/* [3] Prepare the animation effects */
+	transition: transform 200ms linear;
+	animation: rotate 6s linear infinite; /* This is going to be defined in the next step */
+  
+	/* [4] Tweak the appearance, and give it a nice background i.e. the world map */
+	color: #000;
+	border-radius: 50%;
+	background: url('https://lh5.googleusercontent.com/-kkxEx-SkRaY/VBLF4BV2lZI/AAAAAAAAKao/FnKsv7402_c/s500/earthmap.jpg');
+  
+	/* [5] Position things in a 3d space */
+	transform-style: preserve-3d;
+  }
+  
+  
+  
+  #earth:after {
+	/* [1] Break the flow to show this as an overlay */
+	position: absolute;
+	top: 0;
+	left: 0;
+  
+	/* [2] Make it take all the space available in the box (ahem... globe!) */
+	width: 100%;
+	height: 100%;
+  
+	/* [3] Make sure this has no generated content, as we want this just for fancy purposes */
+	content: '';
+  
+	/* [4] Give it some shape and shadow */
+	border-radius: 50%;
+  }
+  
+  #earth:before {
+	/* [1] Again, break the flow to show this as an overlay */
+	position: absolute;
+	top: 0;
+	left: 0;
+  
+	/* [2] Again, give it all the available space */
+	width: 100%;
+	height: 100%;
+  
+	/* [3] Duh. */
+	content: '';
+  
+	/* [4] Add some shape and overlay effect to it */
+	opacity: .2;
+	border-radius: 50%;
+	background: radial-gradient(circle at 100px 100px, #fff, #000);
+  }
+  
+  @keyframes rotate {
+	0% {background-position: 0 0;}
+	100% {background-position: 630px 0;}
+  }
+
+hr{
+	border-top: 1px solid red;
+}
+
+.modal-backdrop {
+	background-color: lightblue;
+ }
+ 
+ .modal-header {
+    border-bottom:1px solid #eee;
+    background-color: #0480be;
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+     border-top-left-radius: 15px;
+     border-top-right-radius: 15px;
+ }
+
+ .modal-body
+ {
+	background-image: url('https://images.pexels.com/photos/110854/pexels-photo-110854.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+ }
+
+ .w3-container,.modal-content{
+	 background-color: rgb(207, 204, 204);
+	 border-radius:30px;
+ }
+
+.removeDisplay{
+	display: none;
+}
