@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
 import EventCard from './EventCard'
 import './Events.css'
 import { Grid } from '@material-ui/core';
+import Sun from './Sun'
 
 class Events extends Component {
 
@@ -36,6 +38,7 @@ class Events extends Component {
 						})
 					}
 				</Grid>
+        <Sun style={{ overflow: "hidden" }} />
 			</div>
 		)
 	}
