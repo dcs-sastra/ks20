@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const Sun = styled.div`
   overflow:hidden;
 	width: 34vw;
-  height: 34vw;
+	height: 34vw;
+	margin-top:-3%;
 	margin-left:31.5vw;
 	z-index:-5;
 	position: absolute;
