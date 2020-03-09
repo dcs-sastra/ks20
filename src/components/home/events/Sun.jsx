@@ -5,6 +5,7 @@ const Sun = styled.div`
 	width: 34vw;
   height: 34vw;
 	margin-left:31.5vw;
+	z-index:-5;
 	position: absolute;
 	background: radial-gradient(transparent 50%, white), radial-gradient(yellow, transparent 70%);
 	-webkit-mask-image: radial-gradient(rgba(0, 0, 0, 1.0) 40%, transparent 65%);
