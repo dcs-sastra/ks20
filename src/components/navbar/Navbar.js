@@ -27,7 +27,7 @@ class Navbar extends Component {
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 			    <a class="navbar-brand" href="#">
-				<img src={window.location.origin + '/ks20.png'} height="75"/>
+				<img src={window.location.origin + '/cropped-ks20.png'} className="img img-fluid logo" height="75"/>
 				</a>
 			    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 			      <li class="nav-item active my-nav-item" id="home-link">

@@ -8,6 +8,7 @@ import meteor from './assets/meteor2.png';
 
 import Navbar from './components/navbar/Navbar';
 import Routes from './components/Routes';
+import Footer from './components/footer/Footer';
 
 import './App.css';
 
@@ -45,6 +46,7 @@ class App extends Component {
 		        />
 
 		        <Routes />
+		        <Footer />
 		    </BrowserRouter>
 		);
 	}
