@@ -10,7 +10,7 @@ export default class Footer extends Component {
 			<div class="container-fluid ftr">
 	            <div class="row">
 	                <div class="col ctr">
-	                    <img class="pic img img-fluid" src={window.location + "/cropped-ks20.png"} />
+	                    <img class="pic img img-fluid" src={window.location.origin + "/cropped-ks20.png"} alt="KS Logo" />
 	                </div>
 	            </div>
 	            <div class="row">
@@ -25,7 +25,7 @@ export default class Footer extends Component {
 	            </div>
 	            <hr class="hor2" />
 	            <div class="row">
-	                <div class="col dsc"><p><img src={devLove} className="img img-fluid" /></p><p><img src={dscLogo}  className="img img-fluid dsc-logo"/></p></div>
+	                <div class="col dsc"><p><img src={devLove} className="img img-fluid" alt="love" /></p><p><img src={dscLogo}  className="img img-fluid dsc-logo" alt="DSC Logo" /></p></div>
 	            </div>
 	            <div class="row dev">
 	                <div class="col ctr">Developers</div>

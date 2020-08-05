@@ -22,14 +22,14 @@ class Timer extends Component {
 	}
 
 	updateTimer = () => {
-		let timeLeft = (new Date(2020, 2, 20)) - Date.now();
-		let days = Math.floor(timeLeft / (1000*60*60*24));
+		let timeLeft = (new Date(2020, 7, 14)) - Date.now();
+		let days = Math.max(Math.floor(timeLeft / (1000*60*60*24)), 0);
 		timeLeft %= (1000*60*60*24);
-		let hours = Math.floor(timeLeft / (1000*60*60));
+		let hours = Math.max(Math.floor(timeLeft / (1000*60*60)), 0);
 		timeLeft %= (1000*60*60);
-		let minutes = Math.floor(timeLeft / (1000*60));
+		let minutes = Math.max(Math.floor(timeLeft / (1000*60)), 0);
 		timeLeft %= (1000*60);
-		let seconds = Math.floor(timeLeft / (1000));
+		let seconds = Math.max(Math.floor(timeLeft / (1000)), 0);
 		this.setState({days, hours, minutes, seconds});
 	}
 
@@ -39,20 +39,24 @@ class Timer extends Component {
 				<div className="timer-text">Launching In</div>
 				<div className="countdown">
 					<div>
-						<div className="val">{this.state.days}</div>
-						<div className="desc">DAYS</div>
+						<div className="unit">
+							<div className="val">{this.state.days}</div>
+							<div className="desc">DAYS</div>
+						</div>
+						<div className="unit">
+							<div className="val">{this.state.hours}</div>
+							<div className="desc">HRS</div>
+						</div>
 					</div>
 					<div>
-						<div className="val">{this.state.hours}</div>
-						<div className="desc">HRS</div>
-					</div>
-					<div>
-						<div className="val">{this.state.minutes}</div>
-						<div className="desc">MINS</div>
-					</div>
-					<div>
-						<div className="val">{this.state.seconds}</div>
-						<div className="desc">SECS</div>
+						<div className="unit">
+							<div className="val">{this.state.minutes}</div>
+							<div className="desc">MINS</div>
+						</div>
+						<div className="unit">
+							<div className="val">{this.state.seconds}</div>
+							<div className="desc">SECS</div>
+						</div>
 					</div>
 				</div>
 			</div>	

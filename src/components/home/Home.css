@@ -15,8 +15,8 @@
 }
 
 #ks-logo-home {
-	width: 30vh;
-	height: 30vh;
+	width: min(30vh, 100vw);
+	height: min(30vh, 100vw);
 	background-color: white;
 	border-radius: 50%;
 	position: absolute;
@@ -34,9 +34,9 @@
 }
 
 @keyframes fadeinmoveup {
-	0% {opacity: 0; margin: auto; width: 60vh; height: 60vh}
-	50% {opacity: 1; margin: auto; width: 60vh; height: 60vh}
-	100% {opacity: 1; margin: none; width: 30vh; height: 30vh}
+	0% {opacity: 0; margin: auto; width: min(60vh, 100vw); height: min(60vh, 100vw)}
+	50% {opacity: 1; margin: auto; width: min(60vh, 100vw); height: min(60vh, 100vw)}
+	100% {opacity: 1; margin: none; width: min(30vh, 100vw); height: min(30vh, 100vw)}
 }
 
 @keyframes fadein {

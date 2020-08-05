@@ -10,42 +10,41 @@
 }
 
 .countdown {
+	font-family: 'digital-7', sans-serif;
+	margin: 2vw auto 1vw auto;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
 	align-items: center;
-	font-family: 'digital-7', sans-serif;
-	margin: 2vw 1vw 1vw 1vw;
+	justify-content: center;
+	width: fit-content;
 }
 
-.countdown > div {
-	display: flex;
+.unit {
+	display: inline-flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin: 0 10px;
 }
 
-.countdown > div > div {
+.unit > div {
 	margin: 1vw;
+	line-height: calc(50px + (100 - 50) * ((100vw - 320px) / (2560 - 320)));
 }
 
 .timer-text {
 	text-align: center;
 	font-family: monospace;
-	font-size: 1.1em;
+	font-size: calc(40px + (90 - 40) * ((100vw - 320px) / (2560 - 320)));
 	line-height: 1.5em;
 }
 
 .desc {
-	display: flex;
-	align-items: flex-end;
+	font-size: calc(24px + (48 - 24) * ((100vw - 320px) / (2560 - 320)));
 }
 
 .val {
-	font-size: 3em;
-	display: flex;
-	align-items: flex-end;
-	line-height: 1em;
+	font-size: calc(50px + (100 - 50) * ((100vw - 320px) / (2560 - 320)));
 }
 
 @font-face {

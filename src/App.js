@@ -35,8 +35,8 @@ class App extends Component {
 	render() {
 	  	return (
 		  	<BrowserRouter>
-		  		<img src={moon} className="moon" />
-		  		<img src={meteor} className="meteor" />
+		  		<img src={moon} className="moon" alt="moon" />
+		  		<img src={meteor} className="meteor" alt="meteor" />
 
 		  		<Navbar />
 
