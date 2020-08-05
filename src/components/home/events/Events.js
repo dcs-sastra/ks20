@@ -5,6 +5,8 @@ import './Events.css'
 import { Grid } from '@material-ui/core';
 import Sun from './Sun'
 
+import AppContext from '../../../AppContext';
+
 class Events extends Component {
 
 	constructor(props) {
@@ -30,7 +32,11 @@ class Events extends Component {
 			}]
 		}
 	}
+
+	static contextType = AppContext;
+
 	render() {
+		console.log(this.context);
 		return (
 			<div id='events' class="container-fluid">
 				Details on Events and Proshows Coming Soon...

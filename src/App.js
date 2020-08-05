@@ -10,10 +10,20 @@ import Navbar from './components/navbar/Navbar';
 import Routes from './components/Routes';
 import Footer from './components/footer/Footer';
 
+import { createClient } from "contentful";
+
+import AppContext from './AppContext';
+
 import './App.css';
 
 class App extends Component {
 
+		constructor() {
+			super();
+			this.state = {
+				data: {}
+			}
+		}
 
 	componentDidMount() {
 		this.canvas = document.querySelector('.canvasWrapper');
@@ -21,6 +31,16 @@ class App extends Component {
 		this.html = document.documentElement;
 		this.updateCanvasHeight();
 		this.checkForUpdate = setInterval(this.updateCanvasHeight, 3000);
+
+		const client = createClient({
+			space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
+			accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN
+		});
+	
+		client
+			.getEntries({content_type: 'category', include: 10})
+			.then(res => this.setState({data: res}))
+			.catch(err => console.error(err));
 	}
 
 	componentWillUnmount() {
@@ -38,15 +58,17 @@ class App extends Component {
 		  		<img src={moon} className="moon" alt="moon" />
 		  		<img src={meteor} className="meteor" alt="meteor" />
 
-		  		<Navbar />
+				<AppContext.Provider value={this.state.data} >
+					<Navbar />
 
-		        <Particles 
-		            params={configs}
-		            className = "canvasWrapper"
-		        />
+					<Particles 
+						params={configs}
+						className = "canvasWrapper"
+					/>
 
-		        <Routes />
-		        <Footer />
+					<Routes />
+					<Footer />
+				</AppContext.Provider>
 		    </BrowserRouter>
 		);
 	}
