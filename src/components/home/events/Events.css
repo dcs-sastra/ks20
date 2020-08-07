@@ -121,3 +121,17 @@
 		width: 80% !important;
 	}
 }
+
+.socials {
+	margin-top: 3rem;
+	border-top: 1px solid lightgray;
+}
+
+.socials > div {
+	margin: 1rem 1rem 1rem 0;
+}
+
+.socials img {
+	width: 35px;
+	margin-right: 1rem;
+}

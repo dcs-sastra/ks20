@@ -3,6 +3,9 @@ import './Footer.css';
 
 import devLove from '../../assets/devLove.png';
 import dscLogo from '../../assets/dsc-logo.png';
+import facebook from '../../assets/facebook48.png';
+import instagram from '../../assets/instagram48.png';
+import twitter from '../../assets/twitter48.png';
 
 export default class Footer extends Component {
 
@@ -24,8 +27,29 @@ export default class Footer extends Component {
 			.then((data) => this.setState({data}));
 	}
 
+	getSocialIcons = () => {
+		if(!this.state.data || this.state.data.length <= 0 || !this.state.data[0].socials) return null;
+		let links = {
+			facebook: null,
+			instagram: null,
+			twitter: null
+		};
+
+		this.state.data[0].socials.forEach(social => {
+			links[social.type.toLowerCase()] = social.url;
+		})
+
+		return (
+			<div className="row">
+				{links.facebook !== null && <a className="col social" href={links.facebook} target="_blank" rel="noopener noreferrer" ><img src={facebook} alt="facebook link" /></a>}
+				{links.instagram !== null && <a className="col social" href={links.instagram} target="_blank" rel="noopener noreferrer"><img src={instagram} alt="instagram link" /></a>}
+				{links.twitter !== null && <a className="col social" href={links.twitter} target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter link" /></a>}
+			</div>
+		);
+
+	}
+
 	render() {
-		console.log(this.state.data);
 		return (
 			<div id="contact-us" className="container-fluid ftr">
 	            <div className="row">
@@ -38,11 +62,21 @@ export default class Footer extends Component {
 	            </div>
 	            <hr className="hor3" />
 	            <div className="row">
-	                <div className="col occ">
-						<p className="contact-pos">{this.state.data[0].contact.position}</p>
-						<p className="tdet">{this.state.data[0].contact.name}: {this.state.data[0].contact.phone}</p>
-	                </div>
+					{
+						this.state.data &&
+						this.state.data.length > 0 &&
+						this.state.data[0].contact &&
+						(
+							<div className="col occ">
+								<p className="contact-pos">{this.state.data[0].contact.position}</p>
+								<p className="tdet">{this.state.data[0].contact.name}: {this.state.data[0].contact.phone}</p>
+							</div>
+						)
+					}
 	            </div>
+				
+				{this.getSocialIcons()}
+				
 	            <hr className="hor2" />
 	            <div className="row">
 	                <div className="col dsc"><p><img src={devLove} className="img img-fluid" alt="love" /></p><p><img src={dscLogo}  className="img img-fluid dsc-logo" alt="DSC Logo" /></p></div>

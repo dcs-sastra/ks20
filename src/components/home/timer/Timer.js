@@ -22,7 +22,7 @@ class Timer extends Component {
 	}
 
 	updateTimer = () => {
-		let timeLeft = (new Date(2020, 7, 14)) - Date.now();
+		let timeLeft = (new Date(2020, 7, 15)) - Date.now();
 		let days = Math.max(Math.floor(timeLeft / (1000*60*60*24)), 0);
 		timeLeft %= (1000*60*60*24);
 		let hours = Math.max(Math.floor(timeLeft / (1000*60*60)), 0);

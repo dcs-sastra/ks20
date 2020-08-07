@@ -84,3 +84,16 @@ hr {
 .dsc-logo {
     width: 20rem;
 }
+
+.ftr .social {
+    margin: 1rem 0;
+}
+
+.ftr .social img {
+    width: 40px;
+    transition: 0.3s;
+}
+
+.ftr .social img:hover {
+    transform: scale(1.1);
+}

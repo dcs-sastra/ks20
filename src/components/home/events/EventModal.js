@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Button, Tab, Tabs } from 'react-bootstrap'
+import instagram from '../../../assets/instagram-black-48.png';
+import facebook from '../../../assets/facebook-black-48.png';
+import twitter from '../../../assets/twitter-black-48.png';
 import './Events.css';
 
 export default function EventModal({ show, handleClose, cluster }) {
@@ -33,6 +36,53 @@ export default function EventModal({ show, handleClose, cluster }) {
                 });
         }
     }, [currentEventId]);
+
+    function getSocialIcons() {
+        console.log(clusterDetails.socials);
+		if(!clusterDetails || !clusterDetails.socials) return null;
+		let links = {
+			facebook: null,
+			instagram: null,
+			twitter: null
+		};
+
+		clusterDetails.socials.forEach(social => {
+			links[social.type.toLowerCase()] = social.url;
+		})
+
+		return (
+			<div className="socials">
+                {
+                    links.facebook !== null && 
+                    <div>
+                        <a href={links.facebook} target="_blank" rel="noopener noreferrer" >
+                            <img className="social" src={facebook} alt="facebook link" />
+                            Follow {clusterDetails.name} at facebook
+                        </a>
+                    </div>
+                }
+                {
+                    links.instagram !== null && 
+                    <div>
+                        <a href={links.instagram} target="_blank" rel="noopener noreferrer" >
+                            <img  className="social"  src={instagram} alt="instagram link" />
+                            Follow {clusterDetails.name} at instagram
+                        </a>
+                    </div>
+                }
+				{
+                    links.twitter !== null && 
+                    <div>
+                        <a href={links.twitter} target="_blank" rel="noopener noreferrer" >
+                            <img className="social" src={twitter} alt="twitter link" />
+                            Follow {clusterDetails.name} at twitter
+                        </a>
+                    </div>
+                }
+			</div>
+		);
+
+	}
 
     return (
         <>
@@ -68,6 +118,7 @@ export default function EventModal({ show, handleClose, cluster }) {
                                                             )
                                                             : null
                                                     }
+                                                    {getSocialIcons()}
                                                 </div>
                                             )}
                                         </Tab>
