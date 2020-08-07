@@ -10,7 +10,8 @@ import Navbar from './components/navbar/Navbar';
 import Routes from './components/Routes';
 import Footer from './components/footer/Footer';
 
-import AppContext from './AppContext';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './App.css';
 
@@ -46,17 +47,18 @@ class App extends Component {
 		  		<img src={moon} className="moon" alt="moon" />
 		  		<img src={meteor} className="meteor" alt="meteor" />
 
-				<AppContext.Provider value={this.state.data} >
-					<Navbar />
+				<Navbar />
 
-					<Particles 
-						params={configs}
-						className = "canvasWrapper"
-					/>
+				<Particles 
+					params={configs}
+					className = "canvasWrapper"
+				/>
 
-					<Routes />
-					<Footer />
-				</AppContext.Provider>
+				<ToastContainer />
+
+				<Routes />
+				<Footer />
+
 		    </BrowserRouter>
 		);
 	}

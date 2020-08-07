@@ -21,7 +21,7 @@ class Navbar extends Component {
 	
 	render() {
 		return (
-			<nav className="my-nav navbar navbar-expand-lg navbar-dark bg-dark">
+			<nav className="my-nav navbar navbar-expand-sm navbar-dark bg-dark">
 			  <a className="navbar-brand" href="/#">
 			    <img src={window.location.origin + '/cropped-ks20.png'} className="img img-fluid logo" height="75" alt="KS Logo" />
 			  </a>
@@ -37,8 +37,8 @@ class Navbar extends Component {
 			      <li className="nav-item">
 			        <a className="nav-link" href="/#events" onClick={(e) => this.changeActive(e)}>Events</a>
 			      </li>
-			      <li className="nav-item">
-			        <a className="nav-link" href="/#proshows" onClick={(e) => this.changeActive(e)}>Proshows</a>
+				  <li className="nav-item">
+			        <a className="nav-link" href="/#contact-us" onClick={(e) => this.changeActive(e)}>Contact Us</a>
 			      </li>
 			    </ul>
 			  </div>
