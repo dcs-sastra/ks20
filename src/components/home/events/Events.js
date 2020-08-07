@@ -5,6 +5,8 @@ import './Events.css'
 //Deleted Sun
 
 
+import AppContext from '../../../AppContext';
+
 class Events extends Component {
 
 	constructor(props) {
