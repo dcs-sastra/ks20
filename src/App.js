@@ -10,8 +10,6 @@ import Navbar from './components/navbar/Navbar';
 import Routes from './components/Routes';
 import Footer from './components/footer/Footer';
 
-import { createClient } from "contentful";
-
 import AppContext from './AppContext';
 
 import './App.css';
@@ -31,16 +29,6 @@ class App extends Component {
 		this.html = document.documentElement;
 		this.updateCanvasHeight();
 		this.checkForUpdate = setInterval(this.updateCanvasHeight, 3000);
-
-		const client = createClient({
-			space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
-			accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN
-		});
-	
-		client
-			.getEntries({content_type: 'category', include: 10})
-			.then(res => this.setState({data: res}))
-			.catch(err => console.error(err));
 	}
 
 	componentWillUnmount() {

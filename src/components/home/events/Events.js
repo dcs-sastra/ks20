@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import EventModal from './EventModal';
 import './Events.css'
 
-//Deleted Sun
-
-
-import AppContext from '../../../AppContext';
-
 class Events extends Component {
 
 	constructor(props) {
@@ -33,7 +28,9 @@ class Events extends Component {
 	}
 
 	componentDidMount = () => {
-		fetch("https://ks-backend-20.herokuapp.com/categories/").then((response) => response.json()).then((data) => this.setState({ categories: data }));
+		fetch("https://ks-backend-20.herokuapp.com/categories/")
+			.then((response) => response.json())
+			.then((data) => this.setState({ categories: data }));
 	}
 
 	categoryTabGenerator(key, category) {
