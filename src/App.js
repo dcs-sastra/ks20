@@ -43,23 +43,25 @@ class App extends Component {
 
 	render() {
 	  	return (
-		  	<BrowserRouter>
-		  		<img src={moon} className="moon" alt="moon" />
-		  		<img src={meteor} className="meteor" alt="meteor" />
+			<div className="app">
+				<BrowserRouter>
+					<img src={moon} className="moon" alt="moon" />
+					<img src={meteor} className="meteor" alt="meteor" />
 
-				<Navbar />
+					<Navbar />
 
-				<Particles 
-					params={configs}
-					className = "canvasWrapper"
-				/>
+					<Particles 
+						params={configs}
+						className = "canvasWrapper"
+					/>
 
-				<ToastContainer />
+					<ToastContainer />
 
-				<Routes />
-				<Footer />
+					<Routes />
+					<Footer />
 
-		    </BrowserRouter>
+				</BrowserRouter>
+			</div>
 		);
 	}
 }

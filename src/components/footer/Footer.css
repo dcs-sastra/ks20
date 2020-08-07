@@ -22,8 +22,13 @@
 .teams{
     font-size: 120%;
 }
+
+.contact-pos {
+    font-size: 110%;
+}
+
 .tdet{
-    font-size: 100%;
+    font-size: 90%;
     text-align: center;
 }
 .tdet2{
@@ -55,11 +60,21 @@
 }
 .dev{
     font-size: 0.9rem;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
+    padding: 1rem;
+}
+
+.dev > .ctr {
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .dev2 {
-    font-size: 0.7rem;
+    max-width: 500px;
+}
+
+.dev2 > .ctr > p {
+    font-size: 0.75rem !important;
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 
 hr {

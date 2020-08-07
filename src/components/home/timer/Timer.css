@@ -35,7 +35,7 @@
 .timer-text {
 	text-align: center;
 	font-family: monospace;
-	font-size: calc(40px + (90 - 40) * ((100vw - 320px) / (2560 - 320)));
+	font-size: calc(30px + (90 - 30) * ((100vw - 320px) / (2560 - 320)));
 	line-height: 1.5em;
 }
 

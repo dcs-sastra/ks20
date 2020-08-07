@@ -62,10 +62,8 @@ export default function EventModal({ show, handleClose, cluster }) {
                                                         (eventDetails && eventDetails.contacts && eventDetails.contacts.length > 0) 
                                                             ?  eventDetails.contacts.map((contact) => 
                                                                 <div className="contact-details" key={contact._id}>
-                                                                    <h3>{contact.name}</h3>
                                                                     <h4>{contact.position}</h4>
-                                                                    <p>Phone: {contact.phone}</p>
-                                                                    <p>Email: {contact.email}</p>
+                                                                    <p>{contact.name}: {contact.phone}</p>
                                                                 </div>
                                                             )
                                                             : null
