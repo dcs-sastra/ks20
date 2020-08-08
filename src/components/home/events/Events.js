@@ -46,9 +46,9 @@ class Events extends Component {
 
 		return (
 			<div className="category-tab" key={category.id}>
-				<div className={`category-head ${!category.active && 'disabled'}`} onClick={category.active ? handleCategoryClick : (e) => {handleDisableCategoryClick(category.name)} }>
+				<div className={`category-head${!category.active ? ' disabled' : ''}`} onClick={category.active ? handleCategoryClick : (e) => {handleDisableCategoryClick(category.name)} }>
 					{category.name}
-					<span style={{ "float": "right", "pointerEvents": "none" }}>{(thisCategoryIndex === this.state.currentOpenCategory) ? "-" : "+"}</span>
+					<span>{(thisCategoryIndex === this.state.currentOpenCategory) ? "-" : "+"}</span>
 				</div>
 				{
 					category.active && 

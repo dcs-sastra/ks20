@@ -14,14 +14,14 @@
 }
 
 .moon {
-	width: 40vw;
-	height: 40vw;
+	width: 40vmin;
+	height: 40vmin;
 	position: absolute;
 	z-index: -5;
 	background-color: whitesmoke;
 	border-radius: 20vw;
-	top: -20vw;
-	left: -20vw;
+	top: 0vh;
+	left: -15vmin;
 	animation: 2.5s infinite alternate move ease-in-out;
 }
 
@@ -36,8 +36,8 @@
 }
 
 @keyframes move {
-	from {top: -10vw; display: inline;}
-	to {top: -5vw; display: inline;}
+	from {top: 0; display: inline;}
+	to {top: 5vh; display: inline;}
 }
 
 @keyframes strike {

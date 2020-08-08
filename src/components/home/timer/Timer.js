@@ -37,7 +37,7 @@ class Timer extends Component {
 		return (
 			<div id='timer' className='fade-in'>
 				<div className="timer-text">
-					<div className="title">ESPARANZA</div>
+					<div className="title">ESPERANZA</div>
 					<div className="subtext">(15th-30th Aug)</div>
 					<div className="normal">Launching In</div>
 				</div>

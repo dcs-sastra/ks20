@@ -43,12 +43,18 @@
 
 .category-head {
 	border-radius: 15px;
-	height: 2.1em;
 	width: 100%;
 	background-color: rgba(0, 0, 75, 0.8);
 	cursor: pointer;
 	padding: 10px 5%;
 	font-size: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.category-head > span {
+	pointer-events: none;
 }
 
 .category-content {
