@@ -5,20 +5,23 @@ export default class Footer extends Component {
 
 	constructor() {
 		super();
-		this.state = {
-			data: [{
-				contact: {
-					name: 'dummy',
-					phone: '1234567890'
-				}
-			}]
-		}
+		this.state = {}
 	}
 
 	componentDidMount() {
 		fetch("https://ks-backend-20.herokuapp.com/fests")
 			.then((response) => response.json())
 			.then((data) => this.setState({data}));
+	}
+
+	getContacts = () => {
+		if(!this.state.data || this.state.data.length <= 0 || !this.state.data[0].contacts || this.state.data[0].contacts.length <= 0) return null;
+		return this.state.data[0].contacts.map(contact => (
+			<div className="occ" key={contact.id}>
+				<p className="contact-pos">{contact.position}</p>
+				<p className="tdet">{contact.name}: {contact.phone}</p>
+			</div>
+		))
 	}
 
 	getSocialIcons = () => {
@@ -55,18 +58,8 @@ export default class Footer extends Component {
 	                <div className="col contdet">Contact Details</div>
 	            </div>
 	            <hr className="hor3" />
-	            <div className="row">
-					{
-						this.state.data &&
-						this.state.data.length > 0 &&
-						this.state.data[0].contact &&
-						(
-							<div className="col occ">
-								<p className="contact-pos">{this.state.data[0].contact.position}</p>
-								<p className="tdet">{this.state.data[0].contact.name}: {this.state.data[0].contact.phone}</p>
-							</div>
-						)
-					}
+	            <div className="">
+					{this.getContacts()}
 	            </div>
 				
 				{this.getSocialIcons()}
