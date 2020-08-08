@@ -1,12 +1,6 @@
 import React, {Component} from 'react';
 import './Footer.css';
 
-import devLove from '../../assets/devLove.png';
-import dscLogo from '../../assets/dsc-logo.png';
-import facebook from '../../assets/facebook48.png';
-import instagram from '../../assets/instagram48.png';
-import twitter from '../../assets/twitter48.png';
-
 export default class Footer extends Component {
 
 	constructor() {
@@ -41,9 +35,9 @@ export default class Footer extends Component {
 
 		return (
 			<div className="row">
-				{links.facebook !== null && <a className="col social" href={links.facebook} target="_blank" rel="noopener noreferrer" ><img src={facebook} alt="facebook link" /></a>}
-				{links.instagram !== null && <a className="col social" href={links.instagram} target="_blank" rel="noopener noreferrer"><img src={instagram} alt="instagram link" /></a>}
-				{links.twitter !== null && <a className="col social" href={links.twitter} target="_blank" rel="noopener noreferrer"><img src={twitter} alt="twitter link" /></a>}
+				{links.facebook !== null && <a className="col social" href={links.facebook} target="_blank" rel="noopener noreferrer" ><img src="https://i.ibb.co/gvxN93K/facebook48.png" alt="facebook link" /></a>}
+				{links.instagram !== null && <a className="col social" href={links.instagram} target="_blank" rel="noopener noreferrer"><img src="https://i.ibb.co/MpyzpFW/instagram48.png" alt="instagram link" /></a>}
+				{links.twitter !== null && <a className="col social" href={links.twitter} target="_blank" rel="noopener noreferrer"><img src="https://i.ibb.co/Y3znnHp/twitter48.png" alt="twitter link" /></a>}
 			</div>
 		);
 
@@ -54,7 +48,7 @@ export default class Footer extends Component {
 			<div id="contact-us" className="container-fluid ftr">
 	            <div className="row">
 	                <div className="col ctr">
-	                    <img className="pic img img-fluid" src={window.location.origin + "/cropped-ks20.png"} alt="KS Logo" />
+	                    <img className="pic img img-fluid" src="https://i.ibb.co/ygdSQqJ/cropped-ks20.png" alt="KS Logo" />
 	                </div>
 	            </div>
 	            <div className="row">
@@ -79,7 +73,7 @@ export default class Footer extends Component {
 				
 	            <hr className="hor2" />
 	            <div className="row">
-	                <div className="col dsc"><p><img src={devLove} className="img img-fluid" alt="love" /></p><p><img src={dscLogo}  className="img img-fluid dsc-logo" alt="DSC Logo" /></p></div>
+	                <div className="col dsc"><p><img src="https://i.ibb.co/kcqyYXs/devLove.png" className="img img-fluid" alt="love" /></p><p><img src="https://i.ibb.co/480Mxq7/dsc-logo.png"  className="img img-fluid dsc-logo" alt="DSC Logo" /></p></div>
 	            </div>
 	            <div className="row dev">
 	                <div className="col ctr">Developers</div>

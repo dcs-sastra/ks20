@@ -23,7 +23,7 @@ class Navbar extends Component {
 		return (
 			<nav className="my-nav navbar navbar-expand-sm navbar-dark bg-dark">
 			  <a className="navbar-brand" href="/#">
-			    <img src={window.location.origin + '/cropped-ks20.png'} className="img img-fluid logo" height="75" alt="KS Logo" />
+			    <img src="https://i.ibb.co/ygdSQqJ/cropped-ks20.png" className="img img-fluid logo" height="75" alt="KS Logo" />
 			  </a>
 			  <button className="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
 			    <span className="navbar-toggler-icon"></span>

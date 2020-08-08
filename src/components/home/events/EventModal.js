@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Button, Tab, Tabs } from 'react-bootstrap'
-import instagram from '../../../assets/instagram-black-48.png';
-import facebook from '../../../assets/facebook-black-48.png';
-import twitter from '../../../assets/twitter-black-48.png';
 import './Events.css';
 
 export default function EventModal({ show, handleClose, cluster }) {
@@ -56,7 +53,7 @@ export default function EventModal({ show, handleClose, cluster }) {
                     links.facebook !== null && 
                     <div>
                         <a href={links.facebook} target="_blank" rel="noopener noreferrer" >
-                            <img className="social" src={facebook} alt="facebook link" />
+                            <img className="social" src="https://i.ibb.co/MBhZ2tS/facebook-black-48.png" alt="facebook link" />
                             Follow {clusterDetails.name} at facebook
                         </a>
                     </div>
@@ -65,7 +62,7 @@ export default function EventModal({ show, handleClose, cluster }) {
                     links.instagram !== null && 
                     <div>
                         <a href={links.instagram} target="_blank" rel="noopener noreferrer" >
-                            <img  className="social"  src={instagram} alt="instagram link" />
+                            <img  className="social"  src="https://i.ibb.co/6W5DJs1/instagram-black-48.png" alt="instagram link" />
                             Follow {clusterDetails.name} at instagram
                         </a>
                     </div>
@@ -74,7 +71,7 @@ export default function EventModal({ show, handleClose, cluster }) {
                     links.twitter !== null && 
                     <div>
                         <a href={links.twitter} target="_blank" rel="noopener noreferrer" >
-                            <img className="social" src={twitter} alt="twitter link" />
+                            <img className="social" src="https://i.ibb.co/khKkngS/twitter-black-48.png" alt="twitter link" />
                             Follow {clusterDetails.name} at twitter
                         </a>
                     </div>

@@ -9,7 +9,7 @@ class Home extends Component {
 		return (
 			<div id="home">
 				<div id="top" className="container">
-					<img id="ks-logo-home" className="img-fluid" src={window.location.origin + '/ks20b.png'} alt="KS Logo" />
+					<img id="ks-logo-home" className="img-fluid" src={window.location.origin + '/KS.jpg'} alt="KS Logo" />
 					<Timer />
 				</div>
 				<Events />

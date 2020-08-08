@@ -3,9 +3,9 @@
   "name": "Kuruksastra 2020 Website",
   "icons": [
     {
-      "src": "logo.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "logo.jpg",
+      "type": "image/jpg",
+      "sizes": "32x32"
     }
   ],
   "start_url": ".",
