@@ -117,6 +117,13 @@ export default function EventModal({ show, handleClose, cluster }) {
                                                             )
                                                             : null
                                                     }
+                                                    {
+                                                        eventDetails.poster_link
+                                                            ? <div>
+                                                                <img className="img img-fluid" src={eventDetails.poster_link} alt={`Poster for the event - ${eventDetails.name}`} />
+                                                            </div>
+                                                            : null
+                                                    }
                                                     {getSocialIcons()}
                                                 </div>
                                             )}
