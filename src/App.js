@@ -26,7 +26,7 @@ class App extends Component {
 
 	componentDidMount() {
 		this.canvas = document.querySelector('.canvasWrapper');
-		this.body = document.body;
+		this.body = document.querySelector('#root > div');
 		this.html = document.documentElement;
 		this.updateCanvasHeight();
 		this.checkForUpdate = setInterval(this.updateCanvasHeight, 3000);
@@ -37,7 +37,7 @@ class App extends Component {
 	}
 
 	updateCanvasHeight = () => {
-		let ht = Math.max( this.body.scrollHeight, this.body.offsetHeight, this.html.clientHeight, this.html.scrollHeight, this.html.offsetHeight );
+		let ht = Math.max( this.body.scrollHeight, this.body.offsetHeight);
 		this.canvas.style.height = `${ht}px`;
 	}
 

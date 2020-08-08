@@ -38,7 +38,6 @@ export default function EventModal({ show, handleClose, cluster }) {
     }, [currentEventId]);
 
     function getSocialIcons() {
-        console.log(clusterDetails.socials);
 		if(!clusterDetails || !clusterDetails.socials) return null;
 		let links = {
 			facebook: null,
