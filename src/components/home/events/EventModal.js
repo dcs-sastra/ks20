@@ -8,7 +8,7 @@ export default function EventModal({ show, handleClose, cluster }) {
     const [loading, setLoading] = useState(false);
     const [eventLoading, setEventLoading] = useState(false);
     const [currentEventId, setCurrentEventId] = useState(null);
-    const [eventDetails, setEventDetails] = useState([]);
+    const [eventDetails, setEventDetails] = useState({});
 
     useEffect(() => {
         setLoading(true);
@@ -56,7 +56,7 @@ export default function EventModal({ show, handleClose, cluster }) {
                     <div>
                         <a href={links.facebook} target="_blank" rel="noopener noreferrer" >
                             <img className="social" src="https://i.ibb.co/MBhZ2tS/facebook-black-48.png" alt="facebook link" />
-                            Follow {clusterDetails.name} at facebook
+                            Follow {clusterDetails.name} on facebook
                         </a>
                     </div>
                 }
@@ -65,7 +65,7 @@ export default function EventModal({ show, handleClose, cluster }) {
                     <div>
                         <a href={links.instagram} target="_blank" rel="noopener noreferrer" >
                             <img  className="social"  src="https://i.ibb.co/6W5DJs1/instagram-black-48.png" alt="instagram link" />
-                            Follow {clusterDetails.name} at instagram
+                            Follow {clusterDetails.name} on instagram
                         </a>
                     </div>
                 }
@@ -74,7 +74,7 @@ export default function EventModal({ show, handleClose, cluster }) {
                     <div>
                         <a href={links.twitter} target="_blank" rel="noopener noreferrer" >
                             <img className="social" src="https://i.ibb.co/khKkngS/twitter-black-48.png" alt="twitter link" />
-                            Follow {clusterDetails.name} at twitter
+                            Follow {clusterDetails.name} on twitter
                         </a>
                     </div>
                 }
@@ -134,9 +134,13 @@ export default function EventModal({ show, handleClose, cluster }) {
                         </Tabs>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="success" onClick={(eventLoading) ? null : () => window.open(eventDetails.reg_link)}>
-                            Register
-                    </Button>
+                        {
+                            (eventDetails && eventDetails.reg_link)
+                                ? <a href={eventDetails.reg_link} target="_blank" rel="noreferrer noopener">
+                                    <Button variant="success">Register</Button>
+                                </a>
+                                : null
+                        }
                     </Modal.Footer></>) : "Loading"}
             </Modal>
         </>
