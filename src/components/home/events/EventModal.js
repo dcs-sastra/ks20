@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Button, Tab, Tabs } from 'react-bootstrap'
+import MarkdownView from 'react-showdown';
 import './Events.css';
 
 export default function EventModal({ show, handleClose, cluster }) {
@@ -16,7 +17,9 @@ export default function EventModal({ show, handleClose, cluster }) {
                 .then((response) => response.json())
                 .then((data) => {
                     setClusterDetails(data);
-                    setCurrentEventId(data['events'][0].id);
+                    if(data.events && data.events.length > 0) {
+                        setCurrentEventId(data['events'][0].id);
+                    }
                     setLoading(false);
                 });
         }
@@ -99,9 +102,9 @@ export default function EventModal({ show, handleClose, cluster }) {
                                         <Tab eventKey={event.id} title={event.name} key={event.id} >
                                             {eventLoading ? "Loading" : (
                                                 <div className="event-tab">
-                                                    <p>
-                                                        {eventDetails.description}
-                                                    </p>
+                                                    <div className="md">
+                                                        <MarkdownView markdown = {eventDetails.description} />
+                                                    </div>
                                                     <h2>
                                                         Contact Details
                                                     </h2>
