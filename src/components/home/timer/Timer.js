@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Timer.css'
+import espLogo from '../../../assets/esp-logo.jpg';
 
 class Timer extends Component {
 	constructor() {
@@ -37,7 +38,7 @@ class Timer extends Component {
 		return (
 			<div id='timer' className='fade-in'>
 				<div className="timer-text">
-					<div className="title">ESPERANZA</div>
+					<img className="title" src={espLogo} />
 					<div className="subtext">(15th-30th Aug)</div>
 					<div className="normal">Launching In</div>
 				</div>
