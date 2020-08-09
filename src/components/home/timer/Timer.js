@@ -38,7 +38,7 @@ class Timer extends Component {
 		return (
 			<div id='timer' className='fade-in'>
 				<div className="timer-text">
-					<img className="title" src={espLogo} />
+					<img className="title" src={espLogo} alt="Esperanza" />
 					<div className="subtext">(15th-30th Aug)</div>
 					<div className="normal">Launching In</div>
 				</div>
