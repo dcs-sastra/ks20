@@ -68,7 +68,7 @@ export default class Footer extends Component {
 	            <div className="row">
 	                <div className="col dsc">
 						<p><img src="https://i.ibb.co/kcqyYXs/devLove.png" className="img img-fluid" alt="love" /></p>
-						<a href="http://dscsastra.com/" rel="noopener noreferer"><p><img src="https://i.ibb.co/NVVf4hG/white-logo-transparent-1.png"  className="img img-fluid dsc-logo" alt="DSC Logo" /></p></a>
+						<a href="http://dscsastra.com/" rel="noopener noreferrer" target="_blank"><p><img src="https://i.ibb.co/NVVf4hG/white-logo-transparent-1.png"  className="img img-fluid dsc-logo" alt="DSC Logo" /></p></a>
 					</div>
 	            </div>
 	            <div className="row dev">
