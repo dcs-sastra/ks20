@@ -66,7 +66,10 @@ export default class Footer extends Component {
 				
 	            <hr className="hor2" />
 	            <div className="row">
-	                <div className="col dsc"><p><img src="https://i.ibb.co/kcqyYXs/devLove.png" className="img img-fluid" alt="love" /></p><p><img src="https://i.ibb.co/480Mxq7/dsc-logo.png"  className="img img-fluid dsc-logo" alt="DSC Logo" /></p></div>
+	                <div className="col dsc">
+						<p><img src="https://i.ibb.co/kcqyYXs/devLove.png" className="img img-fluid" alt="love" /></p>
+						<a href="http://dscsastra.com/" rel="noopener noreferer"><p><img src="https://i.ibb.co/NVVf4hG/white-logo-transparent-1.png"  className="img img-fluid dsc-logo" alt="DSC Logo" /></p></a>
+					</div>
 	            </div>
 	            <div className="row dev">
 	                <div className="col ctr">Developers</div>
