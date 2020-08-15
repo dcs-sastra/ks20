@@ -1,72 +1,24 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Timer.css'
 import espLogo from '../../../assets/esp-logo.jpg';
 
-class Timer extends Component {
-	constructor() {
-		super();
-		this.state = {
-			days: 30,
-			hours: 0,
-			minutes: 0,
-			seconds: 0,
-			timeLeft: 100
-		}
-	}
-
-	componentDidMount() {
-		this.interval = setInterval(this.updateTimer, 1000);
-	}
-
-	componentWillUnmount() {
-		clearInterval(this.interval);
-	}
-
-	updateTimer = () => {
-		let timeLeft = (new Date(2020, 7, 15)) - Date.now();
-		let days = Math.max(Math.floor(timeLeft / (1000*60*60*24)), 0);
-		timeLeft %= (1000*60*60*24);
-		let hours = Math.max(Math.floor(timeLeft / (1000*60*60)), 0);
-		timeLeft %= (1000*60*60);
-		let minutes = Math.max(Math.floor(timeLeft / (1000*60)), 0);
-		timeLeft %= (1000*60);
-		let seconds = Math.max(Math.floor(timeLeft / (1000)), 0);
-		this.setState({days, hours, minutes, seconds});
-	}
-
-	render() {
-		return (
-			<div id='timer' className='fade-in'>
-				<div className="timer-text">
-					<img className="title" src={espLogo} alt="Esperanza" />
-					<div className="subtext">(15th-30th Aug)</div>
-					<div className="normal">Launching In</div>
-				</div>
-				<div className="countdown">
-					<div>
-						<div className="unit">
-							<div className="val">{this.state.days}</div>
-							<div className="desc">DAYS</div>
-						</div>
-						<div className="unit">
-							<div className="val">{this.state.hours}</div>
-							<div className="desc">HRS</div>
-						</div>
-					</div>
-					<div>
-						<div className="unit">
-							<div className="val">{this.state.minutes}</div>
-							<div className="desc">MINS</div>
-						</div>
-						<div className="unit">
-							<div className="val">{this.state.seconds}</div>
-							<div className="desc">SECS</div>
-						</div>
-					</div>
-				</div>
-			</div>	
-		)
-	}
+function Timer() {
+	return (
+		<div id='timer' className='fade-in'>
+			<div className="timer-text">
+				<img className="title" src={espLogo} alt="Esperanza" />
+				<div className="subtext">(15th-30th Aug)</div>
+				<a href="/#events">
+					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+						width="64" height="64"
+						viewBox="0 0 226 226"
+						className="down-arrow"
+						style={{fill:"#000000"}}><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style={{"mix-blend-mode": "normal"}}><path d="M0,226v-226h226v226z" fill="none"></path><g><path d="M3.48711,113c0,-60.47266 49.04023,-109.51289 109.51289,-109.51289c60.47266,0 109.51289,49.04023 109.51289,109.51289c0,60.47266 -49.04023,109.51289 -109.51289,109.51289c-60.47266,0 -109.51289,-49.04023 -109.51289,-109.51289z" fill="#000000"></path><path d="M156.74336,87.08945c-13.50703,13.50703 -27.01406,27.0582 -40.56523,40.56523c-13.55117,-13.55117 -27.10234,-27.10234 -40.65352,-40.65352c-11.82969,-11.82969 -30.10391,6.57695 -18.23008,18.45078c16.59688,16.59688 33.19375,33.19375 49.79063,49.79063c5.03203,5.03203 13.37461,4.89961 18.31836,-0.08828c16.59688,-16.59688 33.19375,-33.19375 49.79063,-49.79063c11.78555,-11.87383 -6.62109,-30.14805 -18.45078,-18.27422z" fill="#ffffff"></path></g></g>
+					</svg>
+				</a>
+			</div>
+		</div>	
+	);
 }
 
 export default Timer;
