@@ -33,6 +33,7 @@ export default function EventModal({ show, handleClose, cluster }) {
                 .then((data) => {
                     setEventDetails(data);
                     setEventLoading(false);
+                    console.log(data)
                 });
         }
     }, [currentEventId]);
@@ -123,6 +124,18 @@ export default function EventModal({ show, handleClose, cluster }) {
                                                                 <img className="img img-fluid" src={eventDetails.poster_link} alt={`Poster for the event - ${eventDetails.name}`} />
                                                             </div>
                                                             : null
+                                                    }
+                                                    {
+                                                        (eventDetails && eventDetails.youtube_link && eventDetails.youtube_link !== "")
+                                                        ?   <iframe 
+                                                                title={`youtube-embed-${event.id}`}
+                                                                className="youtube-embed"
+                                                                src={eventDetails.youtube_link} 
+                                                                frameBorder="0" 
+                                                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                                                allowFullScreen 
+                                                            />
+                                                        : null
                                                     }
                                                     {getSocialIcons()}
                                                 </div>
