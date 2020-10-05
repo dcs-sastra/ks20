@@ -1,11 +1,13 @@
 import React from 'react';
 import './Timer.css'
+import ksLogo from '../../../assets/smol_KS.png';
 
 function Timer() {
 	return (
 		<div id='timer' className='fade-in'>
 			<div className="timer-text">
-				<div className="text">Kuruksastra</div>
+				<img className="title" src={ksLogo} alt="Kuruksastra" />
+				<br></br>
 				<a href="/#events">
 					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 						width="64" height="64"
