@@ -29,7 +29,7 @@
 	/* bottom: 5vh; */
 	top: 50vh;
 	animation: fadein 4s ease-in-out;
-	font-size: calc(16px + 2vw);
+	font-size: calc(16px + 2.5em);
 	z-index: -1;
 }
 
