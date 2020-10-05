@@ -1,6 +1,5 @@
 import React from 'react';
 import './Timer.css'
-import espLogo from '../../../assets/esp-logo.jpg';
 
 function Timer() {
 	return (
